@@ -1,0 +1,10 @@
+{
+  "name": "tailwind-theme-kit",
+  "version": "0.0.1",
+  "description": "A customizable Tailwind CSS plugin with reusable components and theme extensions.",
+  "type": "module",
+  "license": "MIT",
+  "dependencies": {
+    "tailwindcss": "^3.4.16"
+  }
+}
