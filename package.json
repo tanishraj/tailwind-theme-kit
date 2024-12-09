@@ -1,10 +1,17 @@
 {
-  "name": "tailwind-theme-kit",
-  "version": "0.0.1",
-  "description": "A customizable Tailwind CSS plugin with reusable components and theme extensions.",
-  "type": "module",
-  "license": "MIT",
-  "dependencies": {
-    "tailwindcss": "^3.4.16"
-  }
+	"name": "tailwind-theme-kit",
+	"version": "0.0.1",
+	"description": "A customizable Tailwind CSS plugin with reusable components and theme extensions.",
+	"type": "module",
+	"scripts": {
+		"format": "biome format --write .",
+	"lint": "biome lint . --write"
+	},
+	"license": "MIT",
+	"dependencies": {
+		"tailwindcss": "^3.4.16"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4"
+	}
 }
