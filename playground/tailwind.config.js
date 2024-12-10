@@ -1,9 +1,6 @@
-import myThemePlugin from '../src/index.js'
+import myPlugin from '../src/index.js'
 
 module.exports = {
   content: ["./index.html"],
-  theme: {
-    extend: {},
-  },
-  plugins: [myThemePlugin],
-}
+  plugins: [myPlugin],
+};
