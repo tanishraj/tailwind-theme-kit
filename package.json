@@ -4,11 +4,14 @@
 	"description": "A customizable Tailwind CSS plugin with reusable components and theme extensions.",
 	"type": "module",
 	"scripts": {
+		"build": "npx tailwindcss -i ./playground/tailwind.css -o ./playground/dist/output.css --watch",
 		"format": "biome format --write .",
-	"lint": "biome lint . --write"
+		"lint": "biome lint . --write"
 	},
 	"license": "MIT",
 	"dependencies": {
+		"autoprefixer": "^10.4.20",
+		"postcss": "^8.4.49",
 		"tailwindcss": "^3.4.16"
 	},
 	"devDependencies": {
