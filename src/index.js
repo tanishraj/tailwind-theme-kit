@@ -1,27 +1,31 @@
 import plugin from "tailwindcss/plugin";
+import { themes } from "./config/themes";
+import { componentStyles } from "./components";
+import { prefixSelectors } from "./utils/prefixSelector";
 
-export default plugin(({ addComponents }) => {
-	addComponents({
-		".btn": {
-			padding: "0.5rem 1rem",
-			borderRadius: "0.25rem",
-			fontWeight: "600",
-			display: "inline-flex",
-			alignItems: "center",
-			justifyContent: "center",
-		},
-		".btn-primary": {
-			padding: "0.5rem 1rem",
-			borderRadius: "0.25rem",
-			fontWeight: "600",
-			display: "inline-flex",
-			alignItems: "center",
-			justifyContent: "center",
-			backgroundColor: "#3b82f6",
-			color: "#ffffff",
-			"&:hover": {
-				backgroundColor: "#2563eb",
-			},
-		},
-	});
+export default plugin((options) => {
+	const {
+		postcss,
+		prefix,
+		config,
+		theme,
+		corePlugins,
+		variants,
+		addBase,
+		addDefaults,
+		addComponents,
+		addUtilities,
+		matchComponents,
+		matchUtilities,
+		addVariant,
+		matchVariant,
+	} = options;
+	const pluginConfig = config().myPlugin;
+	const prefixedComponentStyles = prefixSelectors(
+		componentStyles,
+		pluginConfig.prefix,
+	);
+	console.log("OPTIONS ARE: ", prefixedComponentStyles);
+	console.log("COMPONENT ARE: ", componentStyles);
+	addComponents(prefixedComponentStyles);
 });
