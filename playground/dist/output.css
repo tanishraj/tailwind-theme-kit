@@ -554,7 +554,7 @@ video {
   display: none;
 }
 
-.tk-btn {
+.btn {
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   font-weight: 600;
@@ -563,7 +563,7 @@ video {
   justify-content: center;
 }
 
-.tk-btn-primary {
+.btn-primary {
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   font-weight: 600;
@@ -574,7 +574,7 @@ video {
   color: #ffffff;
 }
 
-.tk-btn-primary:hover {
+.btn-primary:hover {
   background-color: #2563eb;
 }
 

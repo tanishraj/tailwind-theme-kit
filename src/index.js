@@ -25,7 +25,5 @@ export default plugin((options) => {
 		componentStyles,
 		pluginConfig.prefix,
 	);
-	console.log("OPTIONS ARE: ", prefixedComponentStyles);
-	console.log("COMPONENT ARE: ", componentStyles);
 	addComponents(prefixedComponentStyles);
 });
