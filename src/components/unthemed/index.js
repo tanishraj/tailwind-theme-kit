@@ -1,5 +1,5 @@
 import { buttonStyles } from "./button";
 
-export const componentStyles = {
+export const unThemedComponentStyles = {
 	...buttonStyles,
 };
