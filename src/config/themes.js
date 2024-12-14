@@ -1,5 +1,5 @@
 export const themes = {
-	LIGHT: {
+	light: {
 		default: "#3b82f6",
 		neutral: "#2b3440",
 		primary: "#4a00ff",
@@ -10,7 +10,7 @@ export const themes = {
 		warning: "#ffbe00",
 		error: "#ff5861",
 	},
-	DARK: {
+	dark: {
 		default: "#3b82f6",
 		neutral: "#2b3440",
 		primary: "#4a00ff",
@@ -21,7 +21,7 @@ export const themes = {
 		warning: "#ffbe00",
 		error: "#ff5861",
 	},
-	AQUA: {
+	aqua: {
 		default: "#3b82f6",
 		neutral: "#2b3440",
 		primary: "#4a00ff",
