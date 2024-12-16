@@ -5,16 +5,18 @@ export const injectVariables = (
 	includedThemes,
 	allThemes,
 	customVariables,
+	prefix,
 ) => {
 	const themeStyles = {};
 
-	for (const [themeName, colors] of Object.entries(allThemes)) {
-		console.log({ themeName });
+	for (const themeName of includedThemes) {
+		const colors = allThemes[themeName];
 		const selector = `:root.theme-${themeName}`;
 		themeStyles[selector] = Object.entries(colors).reduce(
 			(vars, [key, value]) => {
-				vars[`--color-${key}`] = value;
-				vars[`--color-fg-${key}`] = generateFgColor(value);
+				vars[`--${prefix ? `${prefix}-` : ""}color-${key}`] = value;
+				vars[`--${prefix ? `${prefix}-` : ""}color-fg-${key}`] =
+					generateFgColor(value);
 				return vars;
 			},
 			{},

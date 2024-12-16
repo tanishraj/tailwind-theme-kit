@@ -559,7 +559,7 @@ video {
   --color-fg-default: #000000;
   --color-neutral: #2b3440;
   --color-fg-neutral: #ffffff;
-  --color-primary: red;
+  --color-primary: #4a00ff;
   --color-fg-primary: #ffffff;
   --color-secondary: #ff00d3;
   --color-fg-secondary: #000000;
@@ -575,33 +575,12 @@ video {
   --color-fg-error: #000000;
 }
 
-:root.theme-dark {
-  --color-default: #3b82f6;
-  --color-fg-default: #000000;
-  --color-neutral: #2b3440;
-  --color-fg-neutral: #ffffff;
-  --color-primary: red;
-  --color-fg-primary: #ffffff;
-  --color-secondary: #373737;
-  --color-fg-secondary: #ffffff;
-  --color-accent: #373737;
-  --color-fg-accent: #ffffff;
-  --color-info: #0000ff;
-  --color-fg-info: #ffffff;
-  --color-success: #008000;
-  --color-fg-success: #ffffff;
-  --color-warning: #ffff00;
-  --color-fg-warning: #000000;
-  --color-error: #ff0000;
-  --color-fg-error: #000000;
-}
-
 :root.theme-aqua {
   --color-default: #3b82f6;
   --color-fg-default: #000000;
   --color-neutral: #2b3440;
   --color-fg-neutral: #ffffff;
-  --color-primary: red;
+  --color-primary: #4a00ff;
   --color-fg-primary: #ffffff;
   --color-secondary: #ff00d3;
   --color-fg-secondary: #000000;
@@ -620,7 +599,7 @@ video {
 :root.theme-customTheme {
   --color-default: #ff0000;
   --color-fg-default: #000000;
-  --color-primary: red;
+  --color-primary: #ff0000;
   --color-fg-primary: #000000;
   --color-secondary: #0000ff;
   --color-fg-secondary: #ffffff;
@@ -654,6 +633,10 @@ video {
   justify-content: center;
 }
 
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
 .p-4 {
   padding: 1rem;
 }
@@ -669,4 +652,8 @@ video {
 
 .font-bold {
   font-weight: 700;
+}
+
+.text-primary {
+  color: var(--color-fg-primary);
 }

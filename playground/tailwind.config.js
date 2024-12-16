@@ -4,6 +4,26 @@ module.exports = {
 	content: ["./index.html"],
 	theme: {
 		extend: {
+			backgroundColor: {
+				primary: "var(--color-primary)",
+				secondary: "var(--color-secondary)",
+				accent: "var(--color-accent)",
+				info: "var(--color-info)",
+				success: "var(--color-success)",
+				warning: "var(--color-warning)",
+				error: "var(--color-error)",
+				neutral: "var(--color-neutral)",
+			},
+			textColor: {
+				primary: "var(--color-fg-primary)",
+				secondary: "var(--color-fg-secondary)",
+				accent: "var(--color-fg-accent)",
+				info: "var(--color-fg-info)",
+				success: "var(--color-fg-success)",
+				warning: "var(--color-fg-warning)",
+				error: "var(--color-fg-error)",
+				neutral: "var(--color-fg-neutral)",
+			},
 			myPlugin: {
 				customTheme: {
 					default: "#ff0000",
@@ -20,12 +40,10 @@ module.exports = {
 		},
 	},
 	myPlugin: {
-		themes: ["light", "aqua"],
+		themes: ["light", "aqua", "customTheme"],
 		prefix: "",
 		darkTheme: "dark",
-		customVariables: {
-			"--color-primary": "red",
-		},
+		customVariables: {},
 	},
 	plugins: [myPlugin],
 };

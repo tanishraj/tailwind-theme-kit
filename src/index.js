@@ -34,18 +34,22 @@ export default plugin((options) => {
 		themes: pluginThemes = true,
 		darkTheme: pluginDarkTheme = "dark",
 		customVariables: pluginCustomVariables = {},
+		prefix: pluginPrefix = "",
 	} = pluginOptions;
 	const consumerThemes = theme("myPlugin") || {};
 	const allThemes = mergeThemes(defaultThemes, consumerThemes);
 	const includedThemes = getIncludedThemes(pluginThemes, allThemes);
-	console.log(
-		`${includedThemes.length} themes included [${includedThemes.toString()}]`,
-	);
 
 	if (pluginThemes === false) {
 		addComponents(unThemedComponentStyles);
 	} else {
-		injectVariables(addBase, includedThemes, allThemes, pluginCustomVariables);
+		injectVariables(
+			addBase,
+			includedThemes,
+			allThemes,
+			pluginCustomVariables,
+			pluginPrefix,
+		);
 		addComponents(themedComponentStyles);
 	}
 
