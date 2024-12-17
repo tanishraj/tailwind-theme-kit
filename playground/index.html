@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="theme-light">
     <head>
         <meta charset="UTF-8" />
         <link rel="icon" type="image/svg+xml" href="/vite.svg" />
@@ -8,10 +8,23 @@
         <link rel="stylesheet" href="./dist/output.css"/>
     </head>
     <body>
+        <select id="themeSwitcher">
+      <option value="theme-light">Light</option>
+      <option value="theme-dark">Dark</option>
+      <option value="theme-aqua">Aqua</option>
+    </select>
+
         <div class="flex items-center justify-center h-screen">
-            <h1>HELLO TAILWIND PLUGIN</h1>
-            <button class="btn">Button</button>
-            <button class="btn-primary">Primary Button</button>
+            <div class="bg-primary text-primary p-4 text-6xl font-bold text-center">
+      This is theme-aware content.
+    </div>
         </div>
+
+        <script>
+      const themeSwitcher = document.getElementById("themeSwitcher");
+      themeSwitcher.addEventListener("change", (event) => {
+        document.documentElement.className = event.target.value;
+      });
+    </script>
     </body>
 </html>

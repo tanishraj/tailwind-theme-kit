@@ -554,28 +554,67 @@ video {
   display: none;
 }
 
-.btn {
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+:root.theme-light {
+  --color-default: #3b82f6;
+  --color-fg-default: #000000;
+  --color-neutral: #2b3440;
+  --color-fg-neutral: #ffffff;
+  --color-primary: #4a00ff;
+  --color-fg-primary: #ffffff;
+  --color-secondary: #ff00d3;
+  --color-fg-secondary: #000000;
+  --color-accent: #00d7c0;
+  --color-fg-accent: #000000;
+  --color-info: #00b6ff;
+  --color-fg-info: #000000;
+  --color-success: #00a96e;
+  --color-fg-success: #000000;
+  --color-warning: #ffbe00;
+  --color-fg-warning: #000000;
+  --color-error: #ff5861;
+  --color-fg-error: #000000;
 }
 
-.btn-primary {
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #3b82f6;
-  color: #ffffff;
+:root.theme-dark {
+  --color-default: #3b82f6;
+  --color-fg-default: #000000;
+  --color-neutral: #2b3440;
+  --color-fg-neutral: #ffffff;
+  --color-primary: #373737;
+  --color-fg-primary: #ffffff;
+  --color-secondary: #373737;
+  --color-fg-secondary: #ffffff;
+  --color-accent: #373737;
+  --color-fg-accent: #ffffff;
+  --color-info: #0000ff;
+  --color-fg-info: #ffffff;
+  --color-success: #008000;
+  --color-fg-success: #ffffff;
+  --color-warning: #ffff00;
+  --color-fg-warning: #000000;
+  --color-error: #ff0000;
+  --color-fg-error: #000000;
 }
 
-.btn-primary:hover {
-  background-color: #2563eb;
+:root.theme-aqua {
+  --color-default: #3b82f6;
+  --color-fg-default: #000000;
+  --color-neutral: #2b3440;
+  --color-fg-neutral: #ffffff;
+  --color-primary: #4a00ff;
+  --color-fg-primary: #ffffff;
+  --color-secondary: #ff00d3;
+  --color-fg-secondary: #000000;
+  --color-accent: #00d7c0;
+  --color-fg-accent: #000000;
+  --color-info: #00b6ff;
+  --color-fg-info: #000000;
+  --color-success: #00a96e;
+  --color-fg-success: #000000;
+  --color-warning: #ffbe00;
+  --color-fg-warning: #000000;
+  --color-error: #ff5861;
+  --color-fg-error: #000000;
 }
 
 .flex {
@@ -592,4 +631,29 @@ video {
 
 .justify-center {
   justify-content: center;
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-primary {
+  color: var(--color-fg-primary);
 }
