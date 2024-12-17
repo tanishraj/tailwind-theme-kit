@@ -14,7 +14,5 @@ export function generateThemeVars(themes) {
 		);
 	}
 
-	console.log(`${Object.keys(themeVars).length} theme generated`);
-
 	return themeVars;
 }
