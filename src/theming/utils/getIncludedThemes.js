@@ -13,6 +13,8 @@ export const getIncludedThemes = (
 	} else if (Array.isArray(themes)) {
 		// Include only specified themes
 		includedThemes = themes.filter((theme) => validateTheme(theme, allThemes));
+	} else {
+		includedThemes = [fallbackTheme];
 	}
 
 	// Ensure fallback theme is included
