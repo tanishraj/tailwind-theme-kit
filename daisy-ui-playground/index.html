@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-light">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>tailwind-theme-kit</title>
+        <link rel="stylesheet" href="./dist/output.css"/>
+    </head>
+    <body>
+        <select id="themeSwitcher">
+      <option value="theme-light">Light</option>
+      <option value="theme-dark">Dark</option>
+      <option value="theme-aqua">Aqua</option>
+      <option value="theme-customTheme">Custom</option>
+    </select>
+
+        <div class="flex items-center justify-center h-screen">
+            <div class="bg-primary p-4 text-6xl font-bold text-center">
+      This is theme-aware content.
+    </div>
+        </div>
+
+        <script>
+      const themeSwitcher = document.getElementById("themeSwitcher");
+      themeSwitcher.addEventListener("change", (event) => {
+        document.documentElement.className = event.target.value;
+      });
+    </script>
+    </body>
+</html>

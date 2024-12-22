@@ -29,9 +29,9 @@ export default plugin((options) => {
 		addVariant,
 		matchVariant,
 	} = options;
-	const pluginOptions = config().myPlugin;
+	const pluginOptions = config().myPlugin || {};
 	const {
-		themes: pluginThemes = true,
+		themes: pluginThemes = false,
 		darkTheme: pluginDarkTheme = "dark",
 		customVariables: pluginCustomVariables = {},
 		prefix: pluginPrefix = "",
